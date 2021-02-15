@@ -1,7 +1,7 @@
 ---
 new_page_extension: md
 auto_deploy: false
-admin_path: "/administrador"
+admin_path: "/static/administrador"
 webhook_url: 
 sections:
 - type: directory

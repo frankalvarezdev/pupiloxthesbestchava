@@ -1,6 +1,6 @@
 ---
-label: Team
-hide_body: false
+label: Member
+hide_body: true
 fields:
 - type: text
   name: name

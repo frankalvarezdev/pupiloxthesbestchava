@@ -3,8 +3,9 @@ title: Esta es una publicación de prueba
 description: Este es un articulo de prueba
 img: blog.jpg
 alt: Mi primer articulo
+
 ---
-# Titulo de prueba
+# Titulo editado desde CMS
 
 Cras cursus ultricies mauris, sit amet suscipit lorem vestibulum eget. Vivamus luctus, sem at euismod condimentum, est ante aliquam tortor, et sodales nisi quam pretium libero. Fusce tempor sed elit et pulvinar. Praesent fringilla convallis leo, tempor blandit massa sodales ac. Duis et ante quis purus elementum mattis ac vitae nulla. Cras nisl nulla, pulvinar vitae justo at, ornare pellentesque mauris. Cras in dictum metus. Donec vel mauris et neque semper tincidunt. Sed feugiat finibus rhoncus.
 

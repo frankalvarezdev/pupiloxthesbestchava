@@ -4,6 +4,9 @@
 .main-blog {
     @include container;
 }
+.nuxt-llink{
+    text-decoration: none;
+}
 .blog-posts {
     @include grid(1);
     @include from(sm) {
@@ -23,10 +26,12 @@
     background-size: cover;
 }
 .article-title {
+    margin: 0;
+    margin-top: 0.5rem;
     color: #fff;
     text-decoration: none !important;
 }
 .article-desc {
-    color: rgba(#fff, 0.8);
+    color: rgba(#fff, 0.6);
     text-decoration: none;
 }

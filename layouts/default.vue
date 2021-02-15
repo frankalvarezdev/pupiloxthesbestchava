@@ -2,21 +2,33 @@
     <div>
         <div class='content'>
             <nav class='navbar'>
-                <a href='/' class='navbar-brand'>PUPILO</a>
+                <a href='/' class='navbar-brand'>PUPILO TV</a>
                 <button class='navbar-toggler' @click='openNavbar'>
                     <i class='fa fa-bars'></i>
                 </button>
                 <div class='navbar-content' id='navbar-collapse'>
                     <div class='navbar-links'>
-                        <nuxt-link to='/'>Inicio</nuxt-link>
-                        <nuxt-link to='/#team'>Equipo</nuxt-link>
-                        <a
-                            href='https://www.youtube.com/channel/UCoG6kpIgPKdsMfoDqrSmcEw/videos'
-                            target='_blank'
-                        >Videos</a>
-                        <nuxt-link to='/blog'>Blog</nuxt-link>
-                        <nuxt-link to='/acerca-de'>Acerca de</nuxt-link>
-                        <nuxt-link to='/contacto'>Contacto</nuxt-link>
+                        <a @click='openNavbar'>
+                            <nuxt-link to='/'>Inicio</nuxt-link>
+                        </a>
+                        <a @click='openNavbar'>
+                            <nuxt-link to='/#team'>Equipo</nuxt-link>
+                        </a>
+                        <a @click='openNavbar'>
+                            <a
+                                href='https://www.youtube.com/channel/UCoG6kpIgPKdsMfoDqrSmcEw/videos'
+                                target='_blank'
+                            >Videos</a>
+                        </a>
+                        <a @click='openNavbar'>
+                            <nuxt-link to='/blog'>Blog</nuxt-link>
+                        </a>
+                        <a @click='openNavbar'>
+                            <nuxt-link to='/acerca-de'>Acerca de</nuxt-link>
+                        </a>
+                        <a @click='openNavbar'>
+                            <nuxt-link to='/contacto'>Contacto</nuxt-link>
+                        </a>
                     </div>
                     <div class='navbar-right'>
                         <a
@@ -59,6 +71,13 @@ export default {
                     src: "https://kit.fontawesome.com/31ef3d53d0.js",
                 },
             ],
+            link: [
+                {
+                    rel: "stylesheet",
+                    href:
+                        "https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap",
+                },
+            ],
         };
     },
     methods: {
@@ -72,6 +91,16 @@ export default {
 <style lang="scss">
 @import "~/assets/config.scss";
 @import "~ascendcss/ascendcss";
+
+* {
+    font-family: "Hind", sans-serif;
+    font-family: "Inter", sans-serif;
+    font-family: "Noto Sans", sans-serif;
+}
+a.nuxt-link-exact-active {
+    color: lighten($bg, 50%) !important;
+    font-weight: 600;
+}
 
 html {
     overflow-y: scroll;

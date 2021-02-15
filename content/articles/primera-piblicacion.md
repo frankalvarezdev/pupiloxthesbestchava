@@ -1,7 +1,7 @@
 ---
 title: Esta es una publicación de prueba
 description: Este es un articulo de prueba
-img: blog.jpg
+img: "/cdn/img/blog/blog.jpg"
 alt: Mi primer articulo
 
 ---
@@ -9,7 +9,7 @@ alt: Mi primer articulo
 
 Cras cursus ultricies mauris, sit amet suscipit lorem vestibulum eget. Vivamus luctus, sem at euismod condimentum, est ante aliquam tortor, et sodales nisi quam pretium libero. Fusce tempor sed elit et pulvinar. Praesent fringilla convallis leo, tempor blandit massa sodales ac. Duis et ante quis purus elementum mattis ac vitae nulla. Cras nisl nulla, pulvinar vitae justo at, ornare pellentesque mauris. Cras in dictum metus. Donec vel mauris et neque semper tincidunt. Sed feugiat finibus rhoncus.
 
-### Subtitulo de prueba
+## Subtitulo de prueba
 
 Maecenas rhoncus dolor sit amet maximus tempus. Morbi volutpat sed ligula ut iaculis. Quisque ut massa vel massa efficitur vehicula et at orci. Fusce sagittis volutpat risus ac semper. In tincidunt venenatis molestie. Donec libero enim, eleifend a quam ut, rutrum tempus nisl. Ut ac laoreet libero, vel placerat mi. Suspendisse potenti. Quisque id tortor consequat, scelerisque purus id, tincidunt libero. Sed nec velit justo. Nullam maximus lacinia odio, at ullamcorper nulla ultricies ac. Sed nec ex in augue auctor blandit vel eget arcu. Proin ac odio non diam ullamcorper tempor. Nunc quis ipsum viverra, blandit lorem nec, gravida diam.
 

@@ -3,7 +3,7 @@
         <div class='article-header'>
             <div class='article-title'>
                 <div>
-                    <h1>{{ article.title }}</h1>
+                    <h1 class="h-title">{{ article.title }}</h1>
                     <p>{{ formatDate(article.updatedAt) }}</p>
                 </div>
             </div>
@@ -16,7 +16,7 @@
                     preserveAspectRatio='xMidYMid meet'
                     viewBox='-204.63833333333235 -40.999999999999886 1284.0000000000002 723.9999999999999'
                     width='100%'
-                    :style='`background-image: url("/cdn/img/blog/${article.img}"); animation: none;`'
+                    :style='`background-image: url(${article.img}); animation: none;`'
                 >
                     <defs>
                         <path
@@ -30,7 +30,7 @@
                 </svg>
             </div>
         </div>
-        <nuxt-content class="aricle-content" :document='article' />
+        <nuxt-content class="blog-content" :document='article' />
     </article>
 </template>
 <script>
@@ -64,6 +64,6 @@ export default {
     },
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 @import "~/assets/pages/blog/slug.scss";
 </style>

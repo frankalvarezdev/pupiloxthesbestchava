@@ -34,12 +34,9 @@
         </div>
         <section class='home-section'>
             <div class='team' id='team'>
-                <div v-for='(index, n) in 6' :key='n'>
-                    <nuxt-link :to='`/team/${getTeamData(n, "id")}`'>
-                        <div
-                            class='team-img'
-                            :style='`--team-img: url(/cdn/img/team/${getTeamData(n, "id")}.jpg)`'
-                        >
+                <div v-for='member of team' :key='member.slug'>
+                    <nuxt-link :to='`/team/${member.slug}`'>
+                        <div class='team-img' :style='`--team-img: url(${member.img})`'>
                             <svg
                                 class='team-svg'
                                 width='100%'
@@ -53,7 +50,7 @@
                             >
                                 <rect x='0' y='0' width='960' height='1280' />
                             </svg>
-                            <span class='title'>{{getTeamData(n, "name")}}</span>
+                            <span class='title'>{{getTeamData(member.name)}}</span>
                         </div>
                     </nuxt-link>
                 </div>
@@ -101,7 +98,16 @@ export default {
     data() {
         return {
             videos: [],
-            team: [],
+        };
+    },
+    async asyncData({ $content, params }) {
+        const team = await $content("team", params.slug)
+            .only(["name", "img", "slug"])
+            .sortBy("createdAt", "asc")
+            .fetch();
+
+        return {
+            team,
         };
     },
     methods: {
@@ -113,9 +119,6 @@ export default {
                 .then((response) => {
                     this.videos = response.data.items;
                 });
-            axios.get("/data/team.json").then((response) => {
-                this.team = response.data;
-            });
         },
         getYtId: function (myString) {
             if (this.videos.length > 0) {
@@ -137,31 +140,32 @@ export default {
                 return this.videos[n].link;
             }
         },
-        getTeamData(n, property) {
-            if (this.team.length > 0) {
-                let data = this.team[n];
-                if (property == "name") {
-                    data = data[property].split(" ");
-                    return `${data[0]} ${data[1]}`;
-                }
-                return data[property];
-            }
+        getTeamData(data) {
+            data = data.split(" ");
+            return `${data[0]} ${data[1]}`;
         },
     },
     head() {
         return {
-            title:"PUPILO X THES BEST CHAVA",
+            title: "PUPILO X THES BEST CHAVA",
             meta: [
                 {
                     hid: "description",
                     name: "description",
-                    content:
-                        "Sitio oficial de  PUPILO X THES BEST CHAVA",
+                    content: "Sitio oficial de  PUPILO X THES BEST CHAVA",
                 },
-                { property: "og:image", content: "https://pupiloxthesbestchava.netlify.app/cdn/img/team/team.jpg" },
+                {
+                    property: "og:image",
+                    content:
+                        "https://pupiloxthesbestchava.netlify.app/cdn/img/team/team.jpg",
+                },
                 { name: "twitter:card", content: "summary" },
                 // { name: "twitter:site", content: "@xpendmusic" },
-                { name: "twitter:image", content: "https://pupiloxthesbestchava.netlify.app/cdn/img/team/team.jpg" },
+                {
+                    name: "twitter:image",
+                    content:
+                        "https://pupiloxthesbestchava.netlify.app/cdn/img/team/team.jpg",
+                },
             ],
         };
     },

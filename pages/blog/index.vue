@@ -3,7 +3,7 @@
         <h1>Publicaciones del blog</h1>
         <div class='blog-posts'>
             <div v-for='article of articles' :key='article.slug'>
-                <NuxtLink :to='{ name: "blog-slug", params: { slug: article.slug } }'>
+                <NuxtLink class="nuxt-llink" :to='{ name: "blog-slug", params: { slug: article.slug } }'>
                     <svg
                         class='article-img'
                         version='1.1'
@@ -12,7 +12,7 @@
                         preserveAspectRatio='xMidYMid meet'
                         viewBox='-204.63833333333235 -40.999999999999886 1284.0000000000002 723.9999999999999'
                         width='100%'
-                        :style='`background-image: url(/cdn/img/blog/${article.img}); animation: none;`'
+                        :style='`background-image: url(${article.img}); animation: none;`'
                     >
                         <defs>
                             <path
@@ -36,13 +36,12 @@
 <script>
 export default {
     async asyncData({ $content, params }) {
-        const articles = await $content("articles", params.slug)
-            .only(["title", "description", "img", "slug", "author"])
+        let articles = await $content("articles", params.slug)
+            .only(["title", "description", "img", "slug"])
             .sortBy("createdAt", "asc")
             .fetch();
-
         return {
-            articles,
+            articles
         };
     },
     head() {

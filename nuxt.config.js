@@ -1,4 +1,7 @@
 export default {
+  generate: {
+    fallback: '404.html'
+  },
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 

@@ -5,6 +5,12 @@ admin_path: "/static/administrador"
 webhook_url: 
 sections:
 - type: directory
+  path: content/team
+  label: Team
+  create: documents
+  match: "**/*"
+  new_doc_ext: ".md"
+- type: directory
   path: content/articles
   label: Blog
   create: documents

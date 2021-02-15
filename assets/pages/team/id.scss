@@ -1,0 +1,74 @@
+@import "~/assets/config.scss";
+@import "~ascendcss/ascendcss";
+
+.member-header {
+    @include from(md) {
+        @include grid(1 1);
+    }
+    gap: 2rem;
+    padding: 2rem 0;
+}
+.member-header__left {
+    display: flex;
+    align-items: center;
+    @include from(md) {
+        justify-content: flex-end;
+    }
+    justify-content: center;
+}
+.member-header__right {
+    display: flex;
+    align-items: center;
+    @include to(md) {
+        @include container;
+    }
+}
+.member-header__title {
+    margin: 0;
+    margin-bottom: 0.2rem;
+    @include to(md) {
+        text-align: center;
+    }
+}
+.member-header__country {
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
+    display: block;
+    color: rgba(#fff, 0.5);
+    @include to(md) {
+        text-align: center;
+        margin-top: 1.5rem;
+    }
+}
+.member-header__ocupation {
+    margin-bottom: 1rem;
+    display: block;
+    color: rgba(#fff, 0.5);
+    text-transform: uppercase;
+    @include to(md) {
+        text-align: center;
+    }
+}
+.member-header__sentence {
+    margin-bottom: 0.4rem;
+    display: block;
+    color: lighten($bg, 50%);
+    @include to(md) {
+        text-align: center;
+    }
+}
+.member-svg {
+    width: 70%;
+    border-radius: 50%;
+    @include from(md) {
+        width: 90%;
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
+        border-radius: 25% 0.8rem 25% 0.8rem;
+    }
+    position: relative;
+    fill: transparent;
+    background: $bg;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

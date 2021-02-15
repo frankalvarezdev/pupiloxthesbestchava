@@ -1,0 +1,18 @@
+$primary-color: #7d62ff;
+$secondary-color: #ffff;
+$bg: #121921;
+$secodary-bg: lighten($bg, 3%);
+// Breakpoints
+$screen-sm: 38em;
+$screen-md: 50em;
+$screen-lg: 70em;
+$screen-xl: 90em;
+
+// Breakpoints Map
+$breakpoints: (
+    xm: 0,
+    sm: $screen-sm,
+    md: $screen-md,
+    lg: $screen-lg,
+    xl: $screen-xl,
+);

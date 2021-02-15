@@ -1,0 +1,5 @@
+@import "~/assets/config.scss";
+@import "~ascendcss/ascendcss";
+.page-contacto{
+    @include container;
+}

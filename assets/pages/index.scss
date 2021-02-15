@@ -1,0 +1,130 @@
+@import "~/assets/config.scss";
+@import "~ascendcss/ascendcss";
+
+.home {
+    padding: 3rem 1rem !important;
+    @include from(md) {
+        @include grid(1 1);
+    }
+    @include grid(1);
+    background-color: $secodary-bg;
+    .home-title {
+        text-transform: uppercase;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        @include to(md) {
+            margin-top: 1rem;
+        }
+    }
+    .home-desc {
+        color: rgba(255, 255, 255, 0.7);
+        display: block;
+        text-align: center;
+    }
+}
+.home-c-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-section {
+    @include container;
+}
+.description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.team {
+    @include grid(rpt(2, 1));
+    @include from(md) {
+        @include grid(rpt(3, 1));
+    }
+    @include from(lg) {
+        @include grid(rpt(6, 1));
+    }
+    gap: 1rem;
+    padding-top: 3rem;
+    .team-img {
+        background-color: $secodary-bg;
+        position: relative;
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) -40%, rgba(255, 255, 255, 0) 100%), var(--team-img);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 5px;
+        transition: 0.2s;
+        cursor: pointer;
+        &:hover {
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) -10%, rgba(255, 255, 255, 0) 100%), var(--team-img);
+            .title {
+                top: 85%;
+            }
+        }
+    }
+    .team-svg {
+        fill: transparent;
+    }
+    .title {
+        color: #fff;
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transition: 0.2s;
+        text-align: center;
+        transform: translate(-50%, 0%);
+    }
+}
+.videos-title {
+    text-align: center;
+}
+.videos {
+    @include grid(1);
+    @include from(sm) {
+        @include grid(rpt(2, 1));
+    }
+    @include from(md) {
+        @include grid(rpt(4, 1));
+    }
+    gap: 1rem;
+}
+.video {
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    background: $secodary-bg;
+    a {
+        text-decoration: none;
+        color: #fff;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+.youtube-video-img {
+    fill: transparent;
+    border-radius: 5px;
+    background: $bg;
+    animation: skeleton 1s infinite ease-in alternate;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.portada {
+    width: 85%;
+    fill: transparent;
+    border-radius: 5px;
+    background: $bg;
+    animation: skeleton 1s infinite ease-in alternate;
+    cursor: pointer;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.video-title {
+    color: rgba(255, 255, 255, 0.7);
+}

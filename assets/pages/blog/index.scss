@@ -1,0 +1,32 @@
+@import "~/assets/config.scss";
+@import "~ascendcss/ascendcss";
+
+.main-blog {
+    @include container;
+}
+.blog-posts {
+    @include grid(1);
+    @include from(sm) {
+        @include grid(rpt(2, 1));
+    }
+    @include from(md) {
+        @include grid(rpt(4, 1));
+    }
+    gap: 2rem;
+}
+.article-img {
+    fill: transparent;
+    border-radius: 5px;
+    background: $secodary-bg;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.article-title {
+    color: #fff;
+    text-decoration: none !important;
+}
+.article-desc {
+    color: rgba(#fff, 0.8);
+    text-decoration: none;
+}

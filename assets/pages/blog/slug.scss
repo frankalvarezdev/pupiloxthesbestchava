@@ -1,0 +1,29 @@
+@import "~/assets/config.scss";
+@import "~ascendcss/ascendcss";
+
+.article-main {
+    @include container;
+}
+.article-header {
+    padding-top: 2rem;
+    @include grid(1);
+    @include from(md) {
+        @include grid(1 1);
+    }
+    gap: 1rem;
+}
+.article-title{
+    display: flex;
+    align-items: center;
+}
+.article-img {
+    fill: transparent;
+    border-radius: 5px;
+    background: $secodary-bg;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.aricle-content{
+    color: rgba(#fff, 0.8);
+}

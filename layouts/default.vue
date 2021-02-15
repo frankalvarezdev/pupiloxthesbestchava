@@ -7,30 +7,23 @@
                     <i class='fa fa-bars'></i>
                 </button>
                 <div class='navbar-content' id='navbar-collapse'>
-                    <div class='navbar-links'>
-                        <a @click='openNavbar'>
-                            <nuxt-link to='/'>Inicio</nuxt-link>
-                        </a>
-                        <a @click='openNavbar'>
-                            <nuxt-link to='/#team'>Equipo</nuxt-link>
-                        </a>
-                        <a @click='openNavbar'>
-                            <a
-                                href='https://www.youtube.com/channel/UCoG6kpIgPKdsMfoDqrSmcEw/videos'
-                                target='_blank'
-                            >Videos</a>
-                        </a>
-                        <a @click='openNavbar'>
-                            <nuxt-link to='/blog'>Blog</nuxt-link>
-                        </a>
-                        <a @click='openNavbar'>
-                            <nuxt-link to='/acerca-de'>Acerca de</nuxt-link>
-                        </a>
-                        <a @click='openNavbar'>
-                            <nuxt-link to='/contacto'>Contacto</nuxt-link>
-                        </a>
+                    <div class='navbar-links' @click='openNavbar'>
+                        <nuxt-link to='/'>Inicio</nuxt-link>
+
+                        <nuxt-link to='/#team'>Equipo</nuxt-link>
+
+                        <a
+                            href='https://www.youtube.com/channel/UCoG6kpIgPKdsMfoDqrSmcEw/videos'
+                            target='_blank'
+                        >Videos</a>
+
+                        <nuxt-link to='/blog'>Blog</nuxt-link>
+
+                        <nuxt-link to='/acerca-de'>Acerca de</nuxt-link>
+
+                        <nuxt-link to='/contacto'>Contacto</nuxt-link>
                     </div>
-                    <div class='navbar-right'>
+                    <div class='navbar-right' @click='openNavbar'>
                         <a
                             href='https://www.youtube.com/channel/UCoG6kpIgPKdsMfoDqrSmcEw'
                             target='_blank'

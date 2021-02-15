@@ -8,6 +8,5 @@ alt: blog
 # Prueba desde CMS
 
 Esto es una pequeña prueba de publicación desde el **CMS**
-[Hola](/hola)
 
 Prueba de Imagen: ![](/cdn/img/blog/blog.jpg)

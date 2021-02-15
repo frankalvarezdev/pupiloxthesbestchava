@@ -4,6 +4,8 @@ auto_deploy: false
 admin_path: "/static/administrador"
 webhook_url: 
 sections:
+- type: heading
+  label: Head
 - type: directory
   path: content/articles
   label: Blog

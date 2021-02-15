@@ -9,7 +9,7 @@ sections:
   label: Team
   create: documents
   match: "**/*"
-  new_doc_ext: ".md"
+  new_doc_ext: md
 - type: directory
   path: content/articles
   label: Blog

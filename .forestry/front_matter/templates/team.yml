@@ -1,0 +1,35 @@
+---
+label: Team
+hide_body: false
+fields:
+- type: text
+  name: name
+  label: name
+- type: text
+  name: occupation
+  label: occupation
+- type: text
+  name: country
+  label: country
+- type: text
+  name: date
+  label: date
+- type: text
+  name: gender
+  label: gender
+- type: text
+  name: description
+  label: description
+- type: file
+  name: img
+  label: img
+- type: field_group_list
+  name: social_media
+  label: social_media
+  fields:
+  - type: text
+    name: name
+    label: name
+  - type: text
+    name: url
+    label: url

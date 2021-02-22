@@ -14,5 +14,3 @@ fields:
 - type: text
   name: alt
   label: alt
-pages:
-- content/articles/blog.md
